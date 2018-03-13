@@ -1,4 +1,4 @@
-´´´
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,4 +116,4 @@
     <script src="{{ mix('/js/admin/app.js') }}"></script>
 </body>
 </html>
-´´´
+```
