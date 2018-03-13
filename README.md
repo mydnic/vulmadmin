@@ -30,7 +30,7 @@
         <nav class="navbar is-dark">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ route('admin.home') }}">
-                    <img src="/img/logo-nav.svg" alt="Admin Backoffice" height="28">
+                    <img src="/img/logo-nav.svg" alt="Backoffice Logo" height="28">
                 </a>
                 <div class="navbar-burger burger" data-target="adminMenu">
                     <span></span>
@@ -75,7 +75,8 @@
                     </p>
                     <ul class="menu-list">
                         <li>
-                            <a class="is-active" href="{{ route('admin.home') }}">
+                            <a href="{{ route('admin.home') }}"
+                                class="{{ Request::is('admin') ? 'is-active' : '' }}">
                                 Dashboard
                             </a>
                         </li>
@@ -90,13 +91,15 @@
                     </p>
                     <ul class="menu-list">
                         <li>
-                            <a href="{{ route('admin.genre.index') }}">
+                            <a href="{{ route('admin.genre.index') }}"
+                                class="{{ Request::is('admin/genre*') ? 'is-active' : '' }}">
                                 <span class="icon"><i class="fas fa-music"></i></span>
                                 <span>Genres</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('admin.theme.index') }}">
+                            <a href="{{ route('admin.theme.index') }}"
+                                class="{{ Request::is('admin/theme*') ? 'is-active' : '' }}">
                                 <span class="icon"><i class="fas fa-paint-brush"></i></span>
                                 <span>Themes</span>
                             </a>
@@ -105,9 +108,11 @@
                 </aside>
             </div>
             <div class="column">
-                @include('partials.errors')
-                @include('partials.flash')
-                @yield('content')
+                <div class="vulmadmin-page-content">
+                    @include('partials.errors')
+                    @include('partials.flash')
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>
