@@ -30,7 +30,7 @@
         <nav class="navbar is-dark">
             <div class="navbar-brand">
                 <a class="navbar-item" href="{{ route('admin.home') }}">
-                    <img src="/img/logo-nav.svg" alt="WebRadio.io" height="28">
+                    <img src="/img/logo-nav.svg" alt="Admin Backoffice" height="28">
                 </a>
                 <div class="navbar-burger burger" data-target="adminMenu">
                     <span></span>
