@@ -1,7 +1,7 @@
 {
   "name": "vulmadmin",
   "description": "Wrapper For Admin Backoffice using Bulma and a bit of VueJS",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": [
     "admin",
     "vue",
