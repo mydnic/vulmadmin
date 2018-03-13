@@ -1,0 +1,30 @@
+{
+  "name": "vulmadmin",
+  "description": "Wrapper For Admin Backoffice using Bulma and a bit of VueJS",
+  "version": "0.0.1",
+  "keywords": [
+    "admin",
+    "vue",
+    "bulma",
+    "mydnic"
+  ],
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/mydnic/vulmadmin.git"
+  },
+  "main": "js/app.js",
+  "author": {
+    "name": "Clement Rigo",
+    "email": "rigoclement@mydnic.be"
+  },
+  "bugs": {
+    "url": "https://github.com/mydnic/vulmadmin/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18",
+    "jquery": "^3.2",
+    "bulma": "^0.6.2",
+    "vue": "^2.5.7"
+  }
+}
