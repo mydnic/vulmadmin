@@ -8,15 +8,12 @@
     "bulma",
     "mydnic"
   ],
-  "repository" : {
+  "repository": {
     "type": "git",
-    "url": "https://github.com/mydnic/vulmadmin.git"
+    "url": "git+https://github.com/mydnic/vulmadmin.git"
   },
   "main": "js/app.js",
-  "author": {
-    "name": "Clement Rigo",
-    "email": "rigoclement@mydnic.be"
-  },
+  "author": "Clement Rigo <rigoclement@mydnic.be>",
   "bugs": {
     "url": "https://github.com/mydnic/vulmadmin/issues"
   },
@@ -26,5 +23,10 @@
     "jquery": "^3.2",
     "bulma": "^0.6.2",
     "vue": "^2.5.7"
+  },
+  "homepage": "https://github.com/mydnic/vulmadmin#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
   }
 }
