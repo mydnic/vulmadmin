@@ -9,5 +9,7 @@
 @import "side-menu";
 
 .vulmadmin-page-content {
-    margin: 20px;
+    padding: 20px;
+    background-color: $light;
+    min-height: 100vh;
 }
