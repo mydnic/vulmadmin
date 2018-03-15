@@ -14,5 +14,15 @@
     min-height: 100vh;
     .card {
         margin-bottom: 20px;
+        header.card-header {
+            background-color: $light;
+        }
+        footer.card-footer {
+            background-color: $light;
+            .card-footer-item {
+                justify-content: flex-start;
+                text-align: left;
+            }
+        }
     }
 }
