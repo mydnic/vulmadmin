@@ -16,7 +16,7 @@
                     Are you sure you want to delete this ?
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-success">Yes, I Confirm</button>
+                    <button class="button is-success" type="submit">Yes, I Confirm</button>
                     <button class="button">Cancel</button>
                 </footer>
             </div>
@@ -33,7 +33,8 @@
         },
         methods: {
             openConfirmationModal(el) {
-                this.$refs.formConfirm.preventDefault();
+                el.preventDefault();
+                this.isModalOpen = true;
             }
         }
     }
