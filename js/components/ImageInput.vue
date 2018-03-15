@@ -1,13 +1,13 @@
 <template>
     <div class="image-input">
         <input type="file" @change="updatePreview" :name="name">
-        <img :src="previewImage">
+        <img :src="previewImage" :style="{width:width}">
     </div>
 </template>
 
 <script>
 export default {
-    props: ['imageSrc', 'name'],
+    props: ['imageSrc', 'name', 'width'],
     data() {
         return {
             previewImage: undefined,
