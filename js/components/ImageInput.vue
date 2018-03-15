@@ -1,7 +1,7 @@
 <template>
-    <div class="image-input">
+    <div class="image-input" :style="{width:componentWidth}">
         <input type="file" @change="updatePreview" :name="name">
-        <img :src="previewImage" :style="{width:width}">
+        <img :src="previewImage">
     </div>
 </template>
 
@@ -11,10 +11,12 @@ export default {
     data() {
         return {
             previewImage: undefined,
+            componentWidth: '100%'
         }
     },
     mounted() {
         this.previewImage = this.imageSrc;
+        this.componentWidth = this.width;
     },
     methods: {
         updatePreview(event) {
