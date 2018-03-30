@@ -1,3 +1,5 @@
+require('./nav');
+
 window.Vue = require('vue');
 
 import { ServerTable, ClientTable, Event } from 'vue-tables-2';
