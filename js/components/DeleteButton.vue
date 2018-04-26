@@ -3,8 +3,10 @@
         <button class="button is-danger"
             type="submit"
             @click="openConfirmationModal">
-            <span class="icon"><i class="fas fa-ban"></i></span>
-            <span>Delete</span>
+            <slot>
+                <span class="icon"><i class="fas fa-ban"></i></span>
+                <span>Delete</span>
+            </slot>
         </button>
         <modal v-if="isModalOpen" @close="isModalOpen = false">
             <div class="modal-card">
