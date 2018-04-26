@@ -1,7 +1,7 @@
 {
   "name": "vulmadmin",
   "description": "Wrapper For Admin Backoffice using Bulma and a bit of VueJS",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "keywords": [
     "admin",
     "vue",
@@ -20,8 +20,9 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18",
-    "bulma": "^0.6.2",
+    "bulma": "^0.7.0",
     "jquery": "^3.2",
+    "lodash": "^4.17.4",
     "vue": "^2.5.7",
     "vue-tables-2": "^1.3.80"
   },
