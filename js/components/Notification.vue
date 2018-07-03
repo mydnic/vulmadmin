@@ -3,35 +3,73 @@
         levelClass, isOpen ? isVisibleClass : ''
     ]">
         <button class="delete" @click="isOpen = false"></button>
-        <slot></slot>
+        {{ messageText }}
     </div>
 </template>
 
 <script>
 export default {
+    props: ['level', 'message'],
     data() {
         return {
             isOpen: false,
             isVisibleClass: 'is-visible',
-            closeAfter: 10000 // 10 seconds
+            closeAfter: 10000,// 10 seconds
+            levelClass: null,
+            messageText: null
         }
     },
-    props: ['level'],
     created() {
+        if (this.level) {
+            this.levelClass = 'is-' + this.level;
+        }
+        if (this.message) {
+            this.messageText = this.message;
+            this.flash();
+        }
         let self = this;
-
-        setTimeout(function() {
-            self.isOpen = true;
-        }, 100);
-
-        setTimeout(function() {
-            self.isOpen = false;
-        }, self.closeAfter);
+        window.events.$on(
+            'flash', data => self.flash(data)
+        );
     },
-    computed: {
-        levelClass() {
-            return 'is-' + this.level;
+    methods: {
+        flash(data) {
+            if (data) {
+                this.messageText = data.message;
+                this.levelClass = 'is-' + data.level;
+            }
+
+            let self = this;
+
+            setTimeout(function() {
+                self.isOpen = true;
+            }, 100);
+
+            this.hide();
+        },
+        hide() {
+            let self = this;
+
+            setTimeout(function() {
+                self.isOpen = false;
+            }, self.closeAfter);
         }
     },
 }
 </script>
+
+<style lang="scss" scoped>
+.flash.notification {
+    z-index: 99999999999;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    transform: translate(100%);
+    transition: all 0.8s ease-in-out;
+    &.is-visible {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+</style>
